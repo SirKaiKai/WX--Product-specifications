@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "payments": "/components/Cs1/cs1"
+  }
+}
