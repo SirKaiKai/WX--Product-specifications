@@ -1,0 +1,5 @@
+<!--pages/chumo2/chumo2.wxml-->
+<view id="id" bindtouchstart="handletouchtart" bindtouchmove="handletouchmove"
+style="width:100%px;height:80px;line-height:80px;color:#fff;text-align:center; background:red">
+{{text}} 
+</view>

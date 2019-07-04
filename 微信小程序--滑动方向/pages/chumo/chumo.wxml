@@ -1,0 +1,5 @@
+<!--pages/chumo/chumo.wxml-->
+<!-- 拖拽 -->
+<view class='box'>
+  <image src='/pages/img/header.png' style='top:{{ballTop}}px;left:{{ballLeft}}px' bindtouchmove="handletouchmove"></image>
+</view>
