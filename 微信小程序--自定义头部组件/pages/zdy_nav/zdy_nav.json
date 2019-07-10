@@ -1,0 +1,6 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+    "payments": "/components/navbar/navbar"
+    }
+}

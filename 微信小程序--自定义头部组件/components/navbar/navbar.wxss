@@ -1,0 +1,48 @@
+/* 头部公用 */
+
+.NavBar-false {
+  position: relative;
+  z-index: 5;
+  background: white;
+}
+
+.NavBar {
+  background: red;
+  color: #000;
+  font-size: 32rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  line-height: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.NavBar .title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.NavBar view {
+  flex: 1;
+  height: 50px;
+}
+
+.NavBar .left {
+  text-align: left;
+}
+
+.NavBar .left text {
+  font-size: 22px;
+  font-weight: bold;
+}
+

@@ -1,0 +1,12 @@
+<!--components/navbar/navbar.wxml-->
+
+<!--头部内容填充-->
+<view class="NavBar-false" style="height:calc({{navH}}px + 50px);"></view>
+<!-- 人造头部  -->
+<view class="NavBar" style="padding-top:{{navH}}px;height:{{navH}}px + 50px">
+  <view class='left'>
+    <text wx:if="{{left_show}}">自定义左侧内容</text>
+  </view>
+  <view class='title'>{{title}}</view>
+  <view class='right'></view>
+</view>
