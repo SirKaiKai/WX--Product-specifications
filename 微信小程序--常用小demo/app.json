@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/scroll/scroll",
+    "pages/message/message",
     "pages/alerts/alerts"
   ],
   "window": {
