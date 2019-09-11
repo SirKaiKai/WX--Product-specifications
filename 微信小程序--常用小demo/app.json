@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/canvas/canvas",
     "pages/scroll/scroll",
     "pages/message/message",
     "pages/alerts/alerts"
