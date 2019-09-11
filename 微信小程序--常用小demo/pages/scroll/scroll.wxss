@@ -1,0 +1,8 @@
+/* pages/scroll/scroll.wxss */
+.useDetails_tab{position: fixed;top: 0;left: 0;width: 100%;z-index: 3;background: #161823;font-size: 28rpx;text-align: center;align-items: center;opacity: 0.8;display: flex;}
+.useDetails_tab view{line-height: 60rpx;position: relative;flex: 1;color: white}
+.useDetails_tab .active::after{content: "";width: 110rpx;height: 6rpx;background:#FE2C55;bottom: 0;left: calc(50% - 55rpx);position: absolute;opacity: 0.8}
+
+#block1{height: 800rpx;background: darkblue}
+#block2{height: 800rpx;background: darkcyan}
+#block3{height: 800rpx;background: darkgoldenrod}

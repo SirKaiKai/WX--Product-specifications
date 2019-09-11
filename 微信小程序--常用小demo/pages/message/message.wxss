@@ -1,0 +1,25 @@
+/* pages/message/message.wxss */
+.message{width:380rpx;background:rgba(255,175,3,0.8);font-size: 28rpx;align-items: center;border-radius: 25rpx;line-height: 60rpx;text-align: center;margin: 0 auto}
+
+
+.hidden {
+  animation: hide 5s forwards;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

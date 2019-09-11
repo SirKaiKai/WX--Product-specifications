@@ -1,0 +1,4 @@
+"pages/alerts/alerts"  消息公告左右滚动显示
+"pages/message/message"  消息公告间隔显示
+"pages/scroll/scroll" 滚动设置
+"pages/canvas/canvas"  canvas

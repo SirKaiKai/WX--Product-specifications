@@ -1,0 +1,4 @@
+<!--pages/message/message.wxml-->
+<view wx:for="{{messageList}}" wx:key="key" wx:for-index="idx">
+  <view class="message hidden" wx:if="{{messageIndex == idx}}">{{item.text}}</view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/canvas/canvas.wxml-->
+<!-- canvas海报 -->
+<view class="canvas" style="height:{{height}}rpx">
+  <canvas hidden="{{canvasHide}}" canvas-id='my-canvas' id='my-canvas' style="height:{{height}}rpx"></canvas>
+  <image hidden="{{!canvasHide}}" src="{{imgCanvas}}" mode="widthFix" class="imgCanvas" style="height:{{height}}rpx"></image>
+</view>
+ <button bindtap='canvas' class="save" hover-class="hoverBtn">保存海报</button>
+ <!-- 注意：这里如果要使用网络图片的，需要把域名配置为安全域名，否则模拟器先显示，真机上是不显示的 -->

@@ -1,0 +1,5 @@
+/* pages/canvas/canvas.wxss */
+/* canvas */
+.canvas{border-radius: 10rpx;position: relative;z-index: 0}
+.imgCanvas{position: absolute;left: 0;top: 0;width: 100%;}
+#my-canvas{ width:100%;max-width: 420px;border-radius: 8rpx;margin: 0 auto;}
