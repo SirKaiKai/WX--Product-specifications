@@ -2,3 +2,4 @@
 "pages/message/message"  消息公告间隔显示
 "pages/scroll/scroll" 滚动设置
 "pages/canvas/canvas"  canvas
+"pages/map/map"   地图

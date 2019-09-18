@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/map/map",
     "pages/canvas/canvas",
     "pages/scroll/scroll",
     "pages/message/message",
