@@ -1,0 +1,21 @@
+<!--pages/cycleFor/cycleFor.wxml-->
+<view>for循环嵌套</view>
+<view wx:for="{{twoList}}" wx:key="key">
+  <view>
+    {{index}}-{{item.name}}
+  </view>
+  <!--二次嵌套循环-->
+  <view wx:for="{{item.oneList}}" wx:for-item="oneList" wx:key="items">
+    {{oneList.name}}
+  </view>
+</view>
+
+<view>for循环下标 -- {{index1}}</view>
+<view class="flex">
+  <button class="sub" bindtap="btn" wx:for="{{4}}" wx:key="key" data-index="{{index}}">按钮{{index}}</button>
+</view>
+
+<view>for循环控制循环显示几个</view>
+<view wx:for="{{10}}" wx:key="key" wx:for-index="i" wx:if="{{i<3}}">显示第{{i+1}}个</view>
+
+

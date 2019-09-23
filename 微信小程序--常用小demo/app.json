@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/cycleFor/cycleFor",
     "pages/map/map",
     "pages/canvas/canvas",
     "pages/scroll/scroll",
