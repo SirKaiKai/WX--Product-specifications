@@ -3,4 +3,4 @@
 "pages/scroll/scroll" 滚动设置
 "pages/canvas/canvas"  canvas
 "pages/map/map"   地图
-"pages/cycleFor/cycleFor"  for循环的一些问题
+"pages/cycleFor/cycleFor"  for循环的一些问题，新增循环倒计时

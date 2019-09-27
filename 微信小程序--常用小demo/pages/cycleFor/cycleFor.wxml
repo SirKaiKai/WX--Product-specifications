@@ -18,4 +18,10 @@
 <view>for循环控制循环显示几个</view>
 <view wx:for="{{10}}" wx:key="key" wx:for-index="i" wx:if="{{i<3}}">显示第{{i+1}}个</view>
 
-
+<view>循环倒计时</view>
+<view wx:for="{{djs}}" wx:key="key">
+<!-- {{item.time}} -->
+  <text>{{item.date.h}}</text>
+  <text>{{item.date.m}}</text>
+  <text>{{item.date.s}}</text>
+</view>
