@@ -4,3 +4,4 @@
 "pages/canvas/canvas"  canvas
 "pages/map/map"   地图
 "pages/cycleFor/cycleFor"  for循环的一些问题，新增循环倒计时
+"pages/textarea/textarea"  文本框默认组件层级最高问题，

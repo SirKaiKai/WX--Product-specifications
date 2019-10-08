@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/textarea/textarea",
     "pages/cycleFor/cycleFor",
     "pages/map/map",
     "pages/canvas/canvas",

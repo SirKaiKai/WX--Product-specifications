@@ -20,7 +20,7 @@
 
 <view>循环倒计时</view>
 <view wx:for="{{djs}}" wx:key="key">
-<!-- {{item.time}} -->
+  <!-- {{item.time}} -->
   <text>{{item.date.h}}</text>
   <text>{{item.date.m}}</text>
   <text>{{item.date.s}}</text>

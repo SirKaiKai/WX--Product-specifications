@@ -1,0 +1,10 @@
+<!--pages/textarea/textarea.wxml-->
+<view>textarea组件，是小程序原生组件，默认层级是最高的，而且z-index也是无法修改的，这就导致了在一些弹窗、底部导航无法遮挡的情况，这里使用一个text代替textarea，将text元素设置和textarea一样的样式，textarea设置为自动聚焦auto-focus=“true”，然后把textarea隐藏掉，点击text的时候，把textarea显示，把text隐藏，在textarea输入的时候把value值赋值给text，在textarea失去焦点的时候，将textarea隐藏，text显示，这样就设置完成了</view>
+
+<button bindtap="btnClick">点击测试textarea组件是否遮挡弹窗</button>
+<view class="tckBg" wx:if="{{tckBg}}"></view>
+
+<view class="TextBox">
+  <text wx:if="{{!textareaType}}" bindtap="textareaText">{{textareaText}}</text>
+  <textarea wx:if="{{textareaType}}" auto-focus="true" value="{{textareaText}}" bindinput="textareaValue" bindblur="textareaBlur"></textarea>
+</view>
