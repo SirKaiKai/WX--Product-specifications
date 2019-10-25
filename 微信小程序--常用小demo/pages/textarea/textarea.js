@@ -6,10 +6,15 @@ Page({
    */
   data: {
     textareaType: false,
-    textareaText: "",
+    textareaText: "请输入内容",
     tckBg:false
   },
   textareaText: function () {
+    if (this.data.textareaText == "请输入内容") {
+      this.setData({
+        textareaText: ""
+      })
+    }
     this.setData({
       textareaType: (!this.data.textareaType)
     })
@@ -20,6 +25,11 @@ Page({
     })
   },
   textareaBlur: function () {
+    if (this.data.textareaText == "") {
+      this.setData({
+        textareaText: "请输入内容"
+      })
+    }
     this.setData({
       textareaType: (!this.data.textareaType)
     })
