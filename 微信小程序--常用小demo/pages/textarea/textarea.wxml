@@ -8,3 +8,4 @@
   <text wx:if="{{!textareaType}}" bindtap="textareaText">{{textareaText}}</text>
   <textarea wx:if="{{textareaType}}" auto-focus="true" value="{{textareaText}}" bindinput="textareaValue" bindblur="textareaBlur" placeholder="请输入内容"></textarea>
 </view>
+<payments id="payments">{{numbers}}</payments>

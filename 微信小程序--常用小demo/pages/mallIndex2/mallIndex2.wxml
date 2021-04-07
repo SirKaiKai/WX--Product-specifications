@@ -1,0 +1,31 @@
+<!--pages/mallIndex3/mallIndex3.wxml-->
+<!-- 左侧滚动栏 -->
+<view class="body">
+  <view class='left'>
+    <scroll-view scroll-y scroll-with-animation class='scrollY' style='height: {{winHeight}}px' scroll-into-view="leftTap-{{indexId}}">
+      <view class='all clear'>
+        <block wx:key="tabsList" wx:for="{{tabsList}}">
+          <view bindtap='jumpIndex' data-menuindex='{{index}}' id="leftTap-{{index}}">
+            <view class="text-style {{indexId==index?' activeView':''}}">
+              <text class="{{indexId==index?'active1':''}}">{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view  class="right" style='height: 100%'>
+    <scroll-view scroll-y scroll-with-animation bindscroll="scroll" bindscrolltolower="scrollBottom" scroll-into-view="{{toTitle}}" class='scrollRight' style='height: {{winHeight}}px'>
+      <block wx:key="tabsList" wx:for="{{tabsList}}">
+        <view id="view-{{index}}">
+          <view class="title" id="title-{{index}}">{{item.name}}</view>
+          <view class="orders" wx:for="{{item.list}}" wx:for-item="item2" wx:key='index'>
+            <view style="height:400rpx">{{item2.anchor}}</view>
+          </view>
+        </view>
+      </block>
+      <!-- <view style="height:calc({{winHeight}}px - {{ordersHeight}}px);padding-top:50px;background:#fff;">没有更多了</view> -->
+      <view style="height:{{moreHeight==''?'auto':moreHeight+'px'}};background:#fff;padding:30rpx">没有更多</view>
+    </scroll-view>
+  </view>
+</view>

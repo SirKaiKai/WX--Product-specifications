@@ -7,7 +7,7 @@ Page({
   data: {
     textareaType: false,
     textareaText: "请输入内容",
-    tckBg:false
+    tckBg:false,
   },
   textareaText: function () {
     if (this.data.textareaText == "请输入内容") {
@@ -51,7 +51,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.payments = this.selectComponent("#payments")
   },
 
   /**

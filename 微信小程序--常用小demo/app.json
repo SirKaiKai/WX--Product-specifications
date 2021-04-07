@@ -6,7 +6,8 @@
     "pages/canvas/canvas",
     "pages/scroll/scroll",
     "pages/message/message",
-    "pages/alerts/alerts"
+    "pages/alerts/alerts",
+    "pages/mallIndex2/mallIndex2"
   ],
   "window": {
     "backgroundTextStyle": "light",

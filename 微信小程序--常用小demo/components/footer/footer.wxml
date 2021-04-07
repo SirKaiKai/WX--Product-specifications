@@ -1,0 +1,6 @@
+<!--components/footer.wxml-->
+<view class="footerBox">
+  <view class="footer">
+    <view>数量{{numbers}}</view>
+  </view>
+</view>

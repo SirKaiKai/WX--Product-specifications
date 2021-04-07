@@ -1,0 +1,40 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/mallIndex/mallIndex",
+          "pathName": "pages/mallIndex/mallIndex",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "mallIndex2",
+          "pathName": "pages/mallIndex2/mallIndex2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mallIndex3/mallIndex3",
+          "pathName": "pages/mallIndex3/mallIndex3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cycleFor/cycleFor",
+          "pathName": "pages/cycleFor/cycleFor",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
