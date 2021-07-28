@@ -1,0 +1,12 @@
+<!--components/customHeader/customHeader.wxml-->
+<!--头部内容填充-->
+<view class="NavBar-false" style="height:{{navHBox}}px"></view>
+<!-- 人造头部 -->
+<view class="NavBar" style="padding-top:{{navH}}px;height:{{navHBox}}px;line-height:{{(navHBox - navH)}}px;color:{{color}};background:{{background}}">
+    <view class="left">
+        <text class="iconfont {{pages == 1?'icon-homefill':'iconleft'}}" bindtap="goBack" wx:if="{{leftShow}}"></text>
+    </view>
+    <view class="title lineText">{{title}}</view>
+    <view class="right"></view> 
+</view>
+

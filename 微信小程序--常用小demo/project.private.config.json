@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -12,26 +13,68 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/mallIndex/mallIndex",
-          "pathName": "pages/mallIndex/mallIndex",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "mallIndex2",
+          "name": "分类滑动",
           "pathName": "pages/mallIndex2/mallIndex2",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/mallIndex3/mallIndex3",
-          "pathName": "pages/mallIndex3/mallIndex3",
+          "name": "循环嵌套",
+          "pathName": "pages/cycleFor/cycleFor",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/cycleFor/cycleFor",
-          "pathName": "pages/cycleFor/cycleFor",
+          "name": "canvas",
+          "pathName": "pages/canvas/canvas",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "css 饼图",
+          "pathName": "pages/pieCss/pieCss",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息左右滚动",
+          "pathName": "pages/alerts/alerts",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/map/map",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/message/message",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/scroll/scroll",
+          "pathName": "pages/scroll/scroll",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "筛选",
+          "pathName": "pages/screening/screening",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "图片上传",
+          "pathName": "pages/imgSrc/imgSrc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "自定义组件",
+          "pathName": "pages/customModule/customModule",
           "scene": null
         }
       ]

@@ -1,5 +1,0 @@
-<!--components/Cs1/cs1.wxml-->
-<view class='box' hidden='{{SH}}'>
-  <text>这是一个组件</text>
-  <button bindtap='gb'>关闭这个组件</button>
-</view>

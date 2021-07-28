@@ -1,5 +1,0 @@
-<!--pages/zujian/zujian.wxml-->
-<payments id="payments" SH="{{SH}}"></payments>
-<button bindtap='gb'>显示组件</button>
-<view>时间1 {{time}}</view>
-<view>时间2 {{time2}}</view>

@@ -1,0 +1,43 @@
+/* components/customHeader/customHeader.wxss */
+@import "../../font.wxss";
+@import "../../app.wxss";
+/* 头部公用 */
+	.NavBar-false {
+	  position: relative;
+	  z-index: 5;
+	}
+	
+	.NavBar {
+	  background: #fff;
+	  font-size: 32rpx;
+	  text-align: center;
+	  font-family: PingFangSC-regular;
+	  position: fixed;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+	  z-index: 5;
+	  display: flex;
+	  justify-content: space-between;
+	  box-sizing: border-box;
+	}
+	
+	.NavBar .title {
+	  font-size: 16px;
+	  font-weight: bold;
+    text-align: center;
+    max-width: 250rpx;
+	}
+	
+	.NavBar view {
+	  flex: 1;
+	}
+	
+	.NavBar .left {
+	  text-align: left;
+		display: flex;align-items: center;
+	}
+	
+	.NavBar .left text {
+	  font-size: 22px;display: inline-block;padding: 0 30rpx;
+	}

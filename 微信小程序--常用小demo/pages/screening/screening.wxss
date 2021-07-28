@@ -1,0 +1,16 @@
+/* pages/screening/screening.wxss */
+page{
+  padding:30rpx;
+}
+.courier{
+  height: 300rpx;overflow-y: auto;
+}
+.courier .item{
+  text-align: center;line-height: 60rpx;
+}
+input{
+  background: #fff;border-radius: 40rpx;margin-bottom: 30rpx;line-height: 60rpx;height: 60rpx;padding: 0 30rpx;
+}
+.active{
+  color: red;
+}

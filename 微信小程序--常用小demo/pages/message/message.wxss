@@ -2,7 +2,7 @@
 .message{width:380rpx;background:rgba(255,175,3,0.8);font-size: 28rpx;align-items: center;border-radius: 25rpx;line-height: 60rpx;text-align: center;margin: 0 auto}
 
 
-.hidden {
+.hiddenBox {
   animation: hide 5s forwards;
 }
 

@@ -1,0 +1,2 @@
+<!--pages/customModule/customModule.wxml-->
+<header title='活动页面' leftShow='{{true}}' color="#fff" background='#4a8bff'></header>

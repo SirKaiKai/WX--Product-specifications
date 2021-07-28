@@ -1,9 +1,0 @@
-/* pages/gwc/gwc.wxss */
-.content_list text{
-  border: 1px solid;
-  margin-right: 20rpx;
-}
-.active{
-  border-color:red!important;
-  color:red;
-}

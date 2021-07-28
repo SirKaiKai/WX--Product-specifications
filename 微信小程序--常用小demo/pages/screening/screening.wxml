@@ -1,0 +1,6 @@
+<!--pages/screening/screening.wxml-->
+
+<input type="text" value="{{selectVal}}" bindinput="serachInt" />
+<view class="courier">
+  <view class="item {{activeIndex==index?'active':''}}" wx:for="{{courierlist}}" wx:key='{{index}}' bindtap="itemClick" data-index="{{index}}" data-title="{{item.title}}">{{item.title}}</view>
+</view>

@@ -28,7 +28,7 @@ Page({
       },
       {
         name:'F类',
-        list:[{anchor: "f"},{anchor: "f"},{anchor: "f"},{anchor: "f"}]
+        list:[]
       }
     ],
     indexId: 0,
@@ -36,15 +36,18 @@ Page({
     scrollTop:0,
     top:[],
     ordersHeight:'',
-    moreHeight:''
+    moreHeight:'',
+    menuClick:'',
   },
   // 左侧点击事件
   jumpIndex(e) {
     let index = e.currentTarget.dataset.menuindex;
-    let that = this
+    let that = this;
     that.setData({
       indexId: index,
-      toTitle: "title-" + index
+      toTitle: "title-" + index,
+      menuClick:true,
+      scrollChange: index == 0 ? false : true
     });
     //可以设置定位事件
   
@@ -67,15 +70,22 @@ Page({
     //     }
     //   }
     // }
-    for(let a=0;a<length;a++){
-      if(that.data.top[a] <= that.data.scrollTop && that.data.scrollTop < that.data.top[a+1] || a==length-1 && that.data.top[a] < that.data.scrollTop){
-        // console.log(that.data.top[a],that.data.scrollTop,that.data.top[a+1],a)
-        if(that.data.indexId != a){
-          that.setData({indexId:a})
+    if(that.data.menuClick == true){
+      that.setData({
+        menuClick:false
+      })
+    }else{
+      for(let a=0;a<length;a++){
+        if(that.data.top[a] <= that.data.scrollTop && that.data.scrollTop < that.data.top[a+1] || a==length-1 && that.data.top[a] < that.data.scrollTop){
+          // console.log(that.data.top[a],that.data.scrollTop,that.data.top[a+1],a)
+          if(that.data.indexId != a){
+            that.setData({indexId:a})
+          }
         }
       }
     }
   },
+
   // scrollBottom(e){
   //   var that = this;
   //   console.log("触底")
@@ -122,11 +132,10 @@ Page({
           that.setData({top: top2});
           //  判断‘最后一块的高度’
           setTimeout(function(){
-            // console.log(top2)
             if(top2[that.data.tabsList.length] - top2[that.data.tabsList.length - 1] < that.data.winHeight){
-              that.setData({moreHeight:that.data.winHeight - (top2[that.data.tabsList.length] - top2[that.data.tabsList.length - 1]) + 30})
+              that.setData({moreHeight:that.data.winHeight - (top2[that.data.tabsList.length] - top2[that.data.tabsList.length - 1])})
             }
-          },300)
+          },1000)
         }       
       });     
     },

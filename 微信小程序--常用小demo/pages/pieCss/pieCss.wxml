@@ -1,0 +1,4 @@
+<!--pages/pieCss/pieCss.wxml-->
+<div class="pieBox" style="background-image: conic-gradient(orange {{percent}}%, purple {{percent}}%);"></div>
+<slider bindchanging="slider"></slider>
+
