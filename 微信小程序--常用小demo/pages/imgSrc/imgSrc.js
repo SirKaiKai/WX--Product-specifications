@@ -1,5 +1,6 @@
 // pages/imgSrc/imgSrc.js
 const app = getApp();
+const wxbarcode = require("../../utils/eqr.js")
 Page({
   /**
    * 页面的初始数据
@@ -9,13 +10,15 @@ Page({
     imgs: [],
     maxLength:3,
     maxSize:1024*1024,
+    codeInfo:{},
+    inputCode:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app)
+    let that = this;
   },
   uploader:function(){
     let that = this;
@@ -76,6 +79,55 @@ Page({
       current: imagesList[index],
       urls: imagesList,
     }) 
+  },
+  sweepCode:function(e){
+    let that = this;
+    wx.scanCode({
+      onlyFromCamera: true,
+      success:function(res){
+        console.log(res)
+        wx.showToast({
+          title: '扫描成功',
+          duration:1000
+        })
+        that.setData({
+          codeInfo:res
+        })
+      }
+    })
+  },
+  inputChange:function(e){
+    this.setData({
+      inputCode:e.detail.value
+    })
+  },
+  codeSetting:function(e){
+    let inputCode = this.data.inputCode;
+    if(inputCode==''){
+      wx.showModal({
+        content:"内容不能为空，请输入",
+        showCancel:false,
+        success:function(res){
+          if(res.confirm){
+            console.log(res)
+          }
+        }
+      })
+      return false;
+    }
+    wxbarcode.barcode('barcode', inputCode, 690,200);
+    wxbarcode.qrcode('qrcode', inputCode, 200, 200);
+    const fileManager = wx.getFileSystemManager();
+    wx.downloadFile({
+      url:'https://cdn.thickinto.com/rdo/mall/ticket/673f1b5d1c9b36966eb4a7fbf8d19971/just.svg',
+      success: ({ tempFilePath }) => {
+        let fileData = fileManager.readFileSync(tempFilePath, 'base64');
+        console.log(`data:image/svg+xml;base64,${fileData}`)
+        this.setData({
+          svgSrc: `data:image/svg+xml;base64,${fileData}`
+        });
+      }
+    });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,15 +1,26 @@
 <!--pages/imgSrc/imgSrc.wxml-->
-<view class="weui-uploader">
-  <view class="weui-uploader__bd">
+<view class="codeBox"> 
+  <input class="codeInt" type="text" placeholder="请输入二维码内容" bindinput='inputChange' placeholder-class="codeInt" />
+  <button bindtap="codeSetting">生成二维码及条形码</button>
+  <view class="code">
+    <canvas canvas-id="barcode" />
+    <canvas class="qrcode" canvas-id="qrcode" />
+  </view>
+</view>
+<view class="uploader">
+  <view class="imgList">
     <block wx:for="{{imagesList}}" wx:key="key">
-      <view class="weui-uploader__file">
+      <view class="imgBox">
         <image data-index="{{index}}" class="weui-uploader__img" src="{{item}}" bindtap="previewImg"></image>
-        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg2">删除</view>
+        <view class="delete" data-index="{{index}}" catchtap="deleteImg2">删除</view>
       </view>
     </block>
-    <view class="weui-uploader__input-box">
-      <!-- <input value='上传' class="weui-uploader__input js_file" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple="" bindtap='uploader' name="images"></input> -->
-      <button bindtap='uploader'>上传img1</button>
-    </view>
   </view>
+  <button bindtap='uploader'>上传img1</button>
+</view>
+<view class="sweepCode">
+  <button bindtap='sweepCode'>扫码识别</button>
+  <view class="item"><text>scanType：</text>{{codeInfo.scanType}}</view>
+  <view class="item"><text>rawData：</text>{{codeInfo.rawData}}</view>
+  <view class="item"><text>result：</text>{{codeInfo.result}}</view>
 </view>
