@@ -1,6 +1,6 @@
 //app.js
 import regeneratorRuntime from "./utils/runtime";
- //解决regeneratorRuntime is not defined
+//解决regeneratorRuntime is not defined
 App({
   onLaunch: function () {
     let that = this;

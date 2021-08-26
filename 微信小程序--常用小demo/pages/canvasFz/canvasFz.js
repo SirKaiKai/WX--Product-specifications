@@ -28,7 +28,7 @@ Page({
         that.setData({
           carvasW:carvasW*rpx,
           carvasH:carvasH*rpx,
-        })
+        }) 
       },
     })
     const query = wx.createSelectorQuery();

@@ -12,7 +12,7 @@
     "pages/screening/screening",
     "pages/imgSrc/imgSrc",
     "pages/customModule/customModule",
-    "pages/canvasFz/canvasFz"
+    "pages/canvasFz/canvasFz" 
   ],
   "window": {
     "backgroundTextStyle": "light",

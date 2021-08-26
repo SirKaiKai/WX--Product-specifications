@@ -175,7 +175,7 @@ async function saveImg(canvasId) {
     }
   }, this)
 }
-
+   
 
 // 暴露接口
 module.exports={
