@@ -77,6 +77,12 @@
           "pathName": "pages/customModule/customModule",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "canvasFz封装",
+          "pathName": "pages/canvasFz/canvasFz",
+          "query": "",
+          "scene": null
         }
       ]
     }

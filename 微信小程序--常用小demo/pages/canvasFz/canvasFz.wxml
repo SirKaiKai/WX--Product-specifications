@@ -1,0 +1,2 @@
+<!--pages/canvasFz/canvasFz.wxml-->
+<canvas id="myCanvas" type="2d" style="height:{{carvasH}}px;width:{{carvasW}}px"></canvas>

@@ -11,7 +11,8 @@
     "pages/pieCss/pieCss",
     "pages/screening/screening",
     "pages/imgSrc/imgSrc",
-    "pages/customModule/customModule"
+    "pages/customModule/customModule",
+    "pages/canvasFz/canvasFz"
   ],
   "window": {
     "backgroundTextStyle": "light",

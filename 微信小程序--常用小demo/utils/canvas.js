@@ -110,6 +110,7 @@ function text(ctx, textCont, size, color, textX, textY, width,center){
 // 保存
 async function saveImg(canvasId) {
   let that = this;
+  // 现在的写法
   const query = wx.createSelectorQuery();
   const canvasObj = await new Promise((resolve, reject) => {
     query.select(canvasId)
@@ -120,11 +121,9 @@ async function saveImg(canvasId) {
   });
   wx.canvasToTempFilePath({
     //fileType: 'jpg',
-    //canvasId: 'posterCanvas', //之前的写法
+    //canvasId: canvasId, //之前的写法
     canvas: canvasObj, //现在的写法
     success: (res) => {
-      console.log(res);
-      // that.setData({ canClose: true });
       //保存图片
       wx.saveImageToPhotosAlbum({
         filePath: res.tempFilePath,
@@ -134,14 +133,33 @@ async function saveImg(canvasId) {
             icon: 'success',
             duration: 2000
           })
-          // setTimeout(() => {
-          //   that.setData({show: false})
-          // }, 6000);
         },
         fail: function (err) {
-          console.log(err);
           if (err.errMsg === "saveImageToPhotosAlbum:fail auth deny") {
-            console.log("当初用户拒绝，再次发起授权")
+            console.log("当用户拒绝，再次发起授权")
+            wx.showModal({
+              title:"提示",
+              content:"您还没有授权使用相册，请前往设置",
+              success (res) {
+                if (res.confirm) {
+                  wx.getSetting({
+                    success(res){
+                      console.log(res,'授权')
+                      if(!res.authSetting['scope.writePhotosAlbum']){
+                        console.log('拉取授权')
+                        wx.openSetting({
+                          success(res){
+                            console.log(res.authSetting,'设置页')
+                          }
+                        })
+                      }
+                    }
+                  })
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
           } else {
             util.showToast("请截屏保存分享");
           }
@@ -167,3 +185,32 @@ module.exports={
   text: text,
   saveImg: saveImg
 }
+
+
+
+// 基础用法
+/*let that = this;
+let carvasW = that.data.carvasW;
+let carvasH = that.data.carvasH;
+let rpx;
+wx.getSystemInfo({
+  success: function (res) {
+    rpx = res.windowWidth / 375
+    that.setData({
+      carvasW:carvasW*rpx,
+      carvasH:carvasH*rpx,
+    })
+  },
+})
+const query = wx.createSelectorQuery();
+query.select("#myCanvas").fields({node:true,size:true}).exec(async(res)=>{
+  const canvas = res[0].node
+  const ctx = canvas.getContext("2d")
+  canvas.width = that.data.carvasW;
+  canvas.height = that.data.carvasH;
+  // 背景色
+  canvasJs.roundRectColor(ctx,0, 0, carvasW * rpx, carvasH * rpx,0,'#fff')
+  // 礼品卡图
+  let carImg = '/images/default.png';
+  await canvasJs.imgs(canvas,ctx,carImg,15*rpx,15*rpx,345*rpx,195*rpx,8*rpx)
+})*/
